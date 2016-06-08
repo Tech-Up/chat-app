@@ -33,43 +33,11 @@
         android:hint="@string/password"
         android:inputType="textPassword" />
 
-    <LinearLayout
-        android:id="@+id/ll_name"
+    <Button
+        android:id="@+id/btn_submit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edt_password"
-        android:layout_marginTop="@dimen/margin_top_register"
-        android:orientation="horizontal">
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/firstname"
-            android:inputType="textPersonName" />
-
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/lastname"
-            android:inputType="textPersonName" />
-
-    </LinearLayout>
-
-    <EditText
-        android:id="@+id/edt_contact_number"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/ll_name"
-        android:layout_marginTop="@dimen/margin_top_register"
-        android:hint="@string/contact_number"
-        android:inputType="phone" />
-
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/edt_contact_number"
         android:layout_marginTop="30dp"
         android:background="@android:color/holo_blue_light"
         android:text="@string/submit"
