@@ -7,61 +7,61 @@ import java.util.Date;
  */
 public class Message {
 
-    private int id;
+  private int id;
 
-    private String message;
+  private String message;
 
-    private String senderName;
+  private String senderName;
 
-    private Date time;
+  private Date time;
 
-    private String senderPhotoUrl;
+  private String senderPhotoUrl;
 
-    public Message(String message, String senderName, Date time, String senderPhotoUrl) {
-        this.id = 0;
-        this.message = message;
-        this.senderName = senderName;
-        this.time = time;
-        this.senderPhotoUrl = senderPhotoUrl;
-    }
+  public Message(String message, String senderName, Date time, String senderPhotoUrl) {
+    this.message = message;
+    this.senderName = senderName;
+    this.time = time;
+    this.senderPhotoUrl = senderPhotoUrl;
+  }
 
-    public int getId() {
-        return id;
-    }
+  public int getId() {
+    return id;
+  }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+  public void setId(int id) {
+    this.id = id;
+  }
 
-    public String getMessage() {
-        return message;
-    }
+  public String getMessage() {
+    return message;
+  }
 
-    public void setMessage(String message) {
-        this.message = message;
-    }
+  public void setMessage(String message) {
+    this.message = message;
+  }
 
-    public String getSenderName() {
-        return senderName;
-    }
+  public String getSenderName() {
+    return senderName;
+  }
 
-    public void setSenderName(String senderName) {
-        this.senderName = senderName;
-    }
+  public void setSenderName(String senderName) {
+    this.senderName = senderName;
+  }
 
-    public Date getTime() {
-        return time;
-    }
+  public Date getTime() {
+    return time;
+  }
 
-    public void setTime(Date time) {
-        this.time = time;
-    }
+  public void setTime(Date time) {
+    this.time = time;
+  }
 
-    public String getSenderPhotoUrl() {
-        return senderPhotoUrl;
-    }
+  public String getSenderPhotoUrl() {
+    return senderPhotoUrl;
+  }
 
-    public void setSenderPhotoUrl(String senderPhotoUrl) {
-        this.senderPhotoUrl = senderPhotoUrl;
-    }
+  public void setSenderPhotoUrl(String senderPhotoUrl) {
+    this.senderPhotoUrl = senderPhotoUrl;
+  }
+
 }
