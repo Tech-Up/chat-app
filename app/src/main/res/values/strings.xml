@@ -12,4 +12,7 @@
     <string name="title_activity_home">Chat App</string>
     <string name="contacts">Contacts</string>
     <string name="title_activity_contacts">ContactsActivity</string>
+    <string name="title_activity_forgot_password">Forgot password</string>
+    <string name="enter_your_email_to_send_a_password_reset">Enter your email to send a password reset.</string>
+    <string name="reset_password">Reset password</string>
 </resources>
