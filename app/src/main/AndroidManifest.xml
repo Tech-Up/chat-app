@@ -40,6 +40,11 @@
             android:label="@string/title_activity_forgot_password"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".ContactDetailsActivity"
+            android:label="@string/title_activity_contact_details"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
