@@ -54,6 +54,9 @@ public class HomeActivity extends AppCompatActivity {
       case R.id.menu_contacts:
         intent = new Intent(this, ContactsActivity.class);
         break;
+      case R.id.menu_profile:
+        intent = new Intent(this, MyProfileActivity.class);
+        break;
     }
     if (intent != null) {
       startActivity(intent);

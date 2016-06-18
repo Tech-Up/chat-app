@@ -16,4 +16,7 @@
     <string name="enter_your_email_to_send_a_password_reset">Enter your email to send a password reset.</string>
     <string name="reset_password">Reset password</string>
     <string name="title_activity_contact_details">Contact details</string>
+    <string name="messages">MESSAGES</string>
+    <string name="my_profile">My profile</string>
+    <string name="title_activity_my_profile">My profile</string>
 </resources>

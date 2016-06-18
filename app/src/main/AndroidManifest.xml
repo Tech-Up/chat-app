@@ -45,6 +45,11 @@
             android:label="@string/title_activity_contact_details"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".MyProfileActivity"
+            android:label="@string/title_activity_my_profile"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
