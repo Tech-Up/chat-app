@@ -1,5 +1,6 @@
 package io.techup.app.chatapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -48,10 +49,14 @@ public class HomeActivity extends AppCompatActivity {
 
   @Override
   public boolean onOptionsItemSelected(MenuItem item) {
+    Intent intent = null;
     switch (item.getItemId()) {
-      case R.id.menu_settings:
-
+      case R.id.menu_contacts:
+        intent = new Intent(this, ContactsActivity.class);
         break;
+    }
+    if (intent != null) {
+      startActivity(intent);
     }
     return super.onOptionsItemSelected(item);
   }
@@ -65,7 +70,7 @@ public class HomeActivity extends AppCompatActivity {
 
     List<Message> messages = new ArrayList<>();
 
-    Message message1 = new Message("Sample Message 1", "Ariel Silva Jr", date, "https://scontent.fmnl4-3.fna.fbcdn.net/v/t1.0-9/228244_224256857586940_3418428_n.jpg?oh=91af892d503f6cd366369f3efdc9d4cc&oe=580D51EA");
+    Message message1 = new Message("Sample Message 1", "Ariel Silva Jr", date, "https://scontent.fmnl2-1.fna.fbcdn.net/v/t1.0-1/c50.0.320.320/p320x320/228244_224256857586940_3418428_n.jpg?oh=1d99d5de6535055f064920c99d6f1709&oe=57D5CD3E");
     Message message2 = new Message("Hi Ariel", "Ian", date, "https://scontent.fmnl4-3.fna.fbcdn.net/t31.0-8/12186257_10206715399982230_8629849205288280003_o.jpg");
     Message message3 = new Message("Hello bro!", "Edward", date, "https://scontent.fmnl4-3.fna.fbcdn.net/v/t1.0-9/13010593_10208018571436635_3485367098360723908_n.jpg?oh=d3692d62dd5a07f369899aa6f205f2ca&oe=580086FC");
     Message message4 = new Message("Hey Hey hey", "Pao", date, "https://scontent.fmnl4-3.fna.fbcdn.net/t31.0-8/11046392_10153470799883519_3745362851528649751_o.jpg");
