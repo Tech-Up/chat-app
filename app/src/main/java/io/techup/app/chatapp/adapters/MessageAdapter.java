@@ -19,7 +19,8 @@ import io.techup.app.chatapp.pojo.Message;
 /**
  * Created by ceosilvajr on 13/06/16.
  */
-public class MessageAdapter extends ArrayAdapter<Message> {
+public class
+MessageAdapter extends ArrayAdapter<Message> {
 
     private Context mContext;
     private List<Message> mMessageList;

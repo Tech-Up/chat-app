@@ -53,7 +53,7 @@ public class HomeActivity extends AppCompatActivity {
         messages.add(message3);
         messages.add(message4);
 
-        MessageAdapter messageAdapter = new MessageAdapter(this, messages);
+        MessageAdapter messageAdapter = new MessageAdapter(HomeActivity.class, messages);
 
         if (messageListView != null) {
             messageListView.setAdapter(messageAdapter);
