@@ -70,8 +70,6 @@ public class HomeActivity extends AppCompatActivity {
     Date date = new Date();
 
     ListView messageListView = (ListView) findViewById(R.id.lv_messages);
-
-
     List<Message> messages = new ArrayList<>();
 
     Message message1 = new Message("Sample Message 1", "Ariel Silva Jr", date, "https://scontent.fmnl2-1.fna.fbcdn.net/v/t1.0-1/c50.0.320.320/p320x320/228244_224256857586940_3418428_n.jpg?oh=1d99d5de6535055f064920c99d6f1709&oe=57D5CD3E");
