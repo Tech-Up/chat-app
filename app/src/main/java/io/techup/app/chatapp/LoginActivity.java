@@ -3,45 +3,30 @@ package io.techup.app.chatapp;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import org.apache.commons.validator.routines.EmailValidator;
 
-public class RegisterActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_register);
-    Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-    setSupportActionBar(toolbar);
-    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    setContentView(R.layout.activity_login);
     initView();
-  }
-
-  @Override
-  public boolean onOptionsItemSelected(MenuItem item) {
-    switch (item.getItemId()) {
-      case android.R.id.home:
-        onBackPressed();
-        break;
-    }
-    return super.onOptionsItemSelected(item);
   }
 
   private void initView() {
 
-    Button btnSubmit = (Button) findViewById(R.id.btn_submit);
-
+    final Button btnLogin = (Button) findViewById(R.id.btn_login);
     final EditText edtEmail = (EditText) findViewById(R.id.edt_email);
     final EditText edtPassword = (EditText) findViewById(R.id.edt_password);
 
-    if (btnSubmit != null) {
-      btnSubmit.setOnClickListener(new View.OnClickListener() {
+    if (btnLogin != null) {
+      btnLogin.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
 
@@ -64,10 +49,32 @@ public class RegisterActivity extends AppCompatActivity {
             }
           }
 
-          Intent intent = new Intent(RegisterActivity.this, HomeActivity.class);
-          intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+          Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
           startActivity(intent);
           finish();
+
+        }
+      });
+    }
+
+    Button btnRegister = (Button) findViewById(R.id.btn_register);
+    if (btnRegister != null) {
+      btnRegister.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+          startActivity(intent);
+        }
+      });
+    }
+
+    TextView textView = (TextView) findViewById(R.id.tv_forgot_password);
+    if (textView != null) {
+      textView.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+          Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+          startActivity(intent);
         }
       });
     }
@@ -76,5 +83,4 @@ public class RegisterActivity extends AppCompatActivity {
   private boolean isValidEmail(String email) {
     return !email.isEmpty() && EmailValidator.getInstance().isValid(email);
   }
-
 }

@@ -1,14 +1,9 @@
 package io.techup.app.chatapp;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -18,49 +13,24 @@ import java.util.List;
 import io.techup.app.chatapp.adapters.MessageAdapter;
 import io.techup.app.chatapp.pojo.Message;
 
-public class HomeActivity extends AppCompatActivity {
+public class ContactDetailsActivity extends AppCompatActivity {
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_home);
+    setContentView(R.layout.activity_contact_details);
     Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(toolbar);
-
-    FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-    if (fab != null) {
-      fab.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
-          Intent intent = new Intent(HomeActivity.this, NewMessageActivity.class);
-          startActivity(intent);
-        }
-      });
-    }
-
+    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     initView();
   }
 
   @Override
-  public boolean onCreateOptionsMenu(Menu menu) {
-    MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.menu_home, menu);
-    return true;
-  }
-
-  @Override
   public boolean onOptionsItemSelected(MenuItem item) {
-    Intent intent = null;
     switch (item.getItemId()) {
-      case R.id.menu_contacts:
-        intent = new Intent(this, ContactsActivity.class);
+      case android.R.id.home:
+        onBackPressed();
         break;
-      case R.id.menu_profile:
-        intent = new Intent(this, MyProfileActivity.class);
-        break;
-    }
-    if (intent != null) {
-      startActivity(intent);
     }
     return super.onOptionsItemSelected(item);
   }
@@ -69,11 +39,7 @@ public class HomeActivity extends AppCompatActivity {
 
     Date date = new Date();
 
-<<<<<<< HEAD
-        MessageAdapter messageAdapter = new MessageAdapter(HomeActivity.class, messages);
-=======
     ListView messageListView = (ListView) findViewById(R.id.lv_messages);
->>>>>>> 4965fc4316c7fee7cd8db9fb954cdb40229a5274
 
 
     List<Message> messages = new ArrayList<>();

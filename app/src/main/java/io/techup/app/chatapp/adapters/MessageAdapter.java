@@ -22,43 +22,44 @@ import io.techup.app.chatapp.pojo.Message;
 public class
 MessageAdapter extends ArrayAdapter<Message> {
 
-    private Context mContext;
-    private List<Message> mMessageList;
+  private Context mContext;
+  private List<Message> mMessageList;
 
-    public MessageAdapter(Context context, List<Message> objects) {
-        super(context, 0, objects);
-        this.mContext = context;
-        this.mMessageList = objects;
-    }
+  public MessageAdapter(Context context, List<Message> objects) {
+    super(context, 0, objects);
+    this.mContext = context;
+    this.mMessageList = objects;
+  }
 
-    @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+  @Override
+  public View getView(int position, View convertView, ViewGroup parent) {
 
-        LayoutInflater inflater = (LayoutInflater) mContext
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    LayoutInflater inflater = (LayoutInflater) mContext
+            .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View view = inflater.inflate(R.layout.message_item, parent, false);
+    View view = inflater.inflate(R.layout.message_item, parent, false);
 
-        ImageView userImage = (ImageView) view.findViewById(R.id.iv_img_user);
-        TextView userName = (TextView) view.findViewById(R.id.tv_user_name);
-        TextView userMessage = (TextView) view.findViewById(R.id.tv_message);
-        TextView time = (TextView) view.findViewById(R.id.tv_time);
+    ImageView userImage = (ImageView) view.findViewById(R.id.iv_img_user);
+    TextView userName = (TextView) view.findViewById(R.id.tv_user_name);
+    TextView userMessage = (TextView) view.findViewById(R.id.tv_message);
+    TextView time = (TextView) view.findViewById(R.id.tv_time);
 
-        Message message = mMessageList.get(position);
-        Glide.with(mContext).load(message.getSenderPhotoUrl()).asBitmap().into(userImage);
-        userName.setText(message.getSenderName());
-        userMessage.setText(message.getMessage());
-        // Convert date to human readable time
-        String convertedTime = DateUtils.getRelativeTimeSpanString(message.getTime().getTime(),
-                System.currentTimeMillis(), DateUtils.SECOND_IN_MILLIS).toString();
-        time.setText(convertedTime);
+    Message message = mMessageList.get(position);
 
-        return view;
-    }
+    Glide.with(mContext).load(message.getSenderPhotoUrl()).asBitmap().into(userImage);
+    userName.setText(message.getSenderName());
+    userMessage.setText(message.getMessage());
+    // Convert date to human readable time
+    String convertedTime = DateUtils.getRelativeTimeSpanString(message.getTime().getTime(), System.currentTimeMillis(),
+            DateUtils.SECOND_IN_MILLIS).toString();
+    time.setText(convertedTime);
 
-    @Override
-    public Message getItem(int position) {
-        return mMessageList.get(position);
-    }
+    return view;
+  }
+
+  @Override
+  public Message getItem(int position) {
+    return mMessageList.get(position);
+  }
 
 }
