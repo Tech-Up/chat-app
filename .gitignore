@@ -103,3 +103,4 @@ out/
 # Keystore files
 *.jks
 /.idea/
+/app/app.iml

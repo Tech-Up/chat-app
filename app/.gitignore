@@ -84,3 +84,4 @@ captures/
 
 # Keystore files
 *.jks
+/app.iml
