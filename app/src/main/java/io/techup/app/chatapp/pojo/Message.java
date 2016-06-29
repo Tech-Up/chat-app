@@ -17,11 +17,14 @@ public class Message {
 
   private String senderPhotoUrl;
 
+  private boolean isSender;
+
   public Message(String message, String senderName, Date time, String senderPhotoUrl) {
     this.message = message;
     this.senderName = senderName;
     this.time = time;
     this.senderPhotoUrl = senderPhotoUrl;
+    this.isSender = false;
   }
 
   public int getId() {
@@ -64,4 +67,11 @@ public class Message {
     this.senderPhotoUrl = senderPhotoUrl;
   }
 
+  public boolean isSender() {
+    return isSender;
+  }
+
+  public void setSender(boolean sender) {
+    isSender = sender;
+  }
 }

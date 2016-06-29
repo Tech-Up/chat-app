@@ -22,4 +22,8 @@
     <string name="title_activity_new_message">Write message</string>
     <string name="search_by_name_or_email">Search by name or email</string>
     <string name="message">Message</string>
+    <string name="title_activity_conversation">Conversation</string>
+    <string name="send">send</string>
+    <string name="write_message">Write message</string>
+    <string name="sample_conversation">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac turpis lorem. Nulla eleifend tortor quis eros vehicula, eu sagittis lectus tempor. Sed elementum fermentum mi, vel porttitor sapien consequat sed. Fusce aliquam varius luctus. Morbi nec orci sed odio consequat tincidunt.</string>
 </resources>
